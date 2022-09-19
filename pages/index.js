@@ -7,6 +7,20 @@ export default function Home() {
         <div className='flex flex-wrap gap-10 justify-around py-24'>
           <Calculator />
         </div>
+        <div className='py-10 border-t border-slate-300/30'>
+          <p className='text-white text-center text-xs'>
+            Designed and Created by{" "}
+            <a
+              href='https://instagram.com/rizkiiaprmn'
+              className='font-bold text-white'
+              target='_blank'
+              rel='noreferrer'
+            >
+              rizkiiaprmn
+            </a>{" "}
+            © Tugas IMK (TI - 3C) 2022
+          </p>
+        </div>
       </div>
     </div>
   );
