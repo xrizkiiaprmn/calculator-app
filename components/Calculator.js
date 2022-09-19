@@ -1,7 +1,6 @@
 import { useState } from "react";
 import ButtonCalculator from "./ButtonCalculator";
 import CalculateHistory from "./CalculateHistory";
-import Image from "next/image";
 
 export default function Calculator() {
   const [displayCalculate, setDisplayCalculate] = useState("");
@@ -99,19 +98,19 @@ export default function Calculator() {
             C
           </ButtonCalculator>
           <ButtonCalculator variant={0} action={sliceDisplay.bind(this)}>
-            <Image src='/delete.svg' alt='delete' width={35} height={35} />
+            <img src='/delete.svg' alt='delete' width={35} height={35} />
           </ButtonCalculator>
           <ButtonCalculator
             variant={0}
             action={operatorHandler.bind(this, "%")}
           >
-            <Image src='/percent.svg' alt='percent' width={35} height={35} />
+            <img src='/percent.svg' alt='percent' width={35} height={35} />
           </ButtonCalculator>
           <ButtonCalculator
             variant={1}
             action={operatorHandler.bind(this, "÷")}
           >
-            <Image src='/divided.svg' alt='divided' width={35} height={35} />
+            <img src='/divided.svg' alt='divided' width={35} height={35} />
           </ButtonCalculator>
           <ButtonCalculator
             variant={0}
@@ -135,12 +134,7 @@ export default function Calculator() {
             variant={1}
             action={operatorHandler.bind(this, "×")}
           >
-            <Image
-              src='/substract.svg'
-              alt='substract'
-              width={35}
-              height={35}
-            />
+            <img src='/substract.svg' alt='substract' width={35} height={35} />
           </ButtonCalculator>
           <ButtonCalculator
             variant={0}
@@ -164,7 +158,7 @@ export default function Calculator() {
             variant={1}
             action={operatorHandler.bind(this, "-")}
           >
-            <Image src='/min.svg' alt='min' width={35} height={35} />
+            <img src='/min.svg' alt='min' width={35} height={35} />
           </ButtonCalculator>
           <ButtonCalculator
             variant={0}
@@ -188,7 +182,7 @@ export default function Calculator() {
             variant={1}
             action={operatorHandler.bind(this, "+")}
           >
-            <Image src='/plus.svg' alt='plus' width={35} height={35} />
+            <img src='/plus.svg' alt='plus' width={35} height={35} />
           </ButtonCalculator>
           <ButtonCalculator variant={0}>r.</ButtonCalculator>
           <ButtonCalculator
@@ -202,7 +196,7 @@ export default function Calculator() {
             action={calculate.bind(this, dataCalculate)}
             widthCustom='w-6/12'
           >
-            <Image src='/equals.svg' alt='equals' width={35} height={35} />
+            <img src='/equals.svg' alt='equals' width={35} height={35} />
           </ButtonCalculator>
         </div>
       </div>
