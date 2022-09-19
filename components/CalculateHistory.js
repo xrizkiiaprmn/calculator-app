@@ -1,7 +1,7 @@
 export default function CalculateHistory(props) {
   return (
     <div className='xl:w-4/12 lg:w-5/12 w-full overflow-auto'>
-      <div className=' flex items-center justify-center py-5 text-2xl font-bold'>
+      <div className=' flex items-center justify-center py-5 sm:text-2xl text-xl font-bold'>
         Riwayat Perhitungan
       </div>
       <table className='w-full table-auto border-collapse border border-slate-500'>
