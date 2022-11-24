@@ -23,7 +23,7 @@ export default function Index() {
               >
                 rizkiiaprmn
               </a>{' '}
-              © Tugas IMK (TI - 3C) 2022
+              © Tugas IMK Kelompok 13 (TI - 3C) 2022
             </p>
           </div>
         </div>
