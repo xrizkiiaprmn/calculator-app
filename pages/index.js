@@ -5,7 +5,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>rizkiiaprmn - Aplikasi Kalkulator</title>
+        <title>IMK Kelompok 13 - Aplikasi Kalkulator</title>
       </Head>
       <div className='bg-gradient-to-b from-cyan-100 to-cyan-500 font-primary'>
         <div className='container mx-auto lg:px-12 sm:px-16 px-8'>
