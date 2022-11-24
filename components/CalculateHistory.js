@@ -16,12 +16,10 @@ export default function CalculateHistory(props) {
         <tbody>
           {props.data.map((item) => (
             <tr className='bg-white text-center' key={item.hasil}>
-              <td className='border border-slate-600 p-2'>
-                {item.angkaPertama}
-              </td>
-              <td className='border border-slate-600 p-2'>{item.operator}</td>
-              <td className='border border-slate-600 p-2'>{item.angkaKedua}</td>
-              <td className='border border-slate-600 p-2'>{item.hasil}</td>
+              <td className='border p-2'>{item.angkaPertama}</td>
+              <td className='border p-2'>{item.operator}</td>
+              <td className='border p-2'>{item.angkaKedua}</td>
+              <td className='border p-2'>{item.hasil}</td>
             </tr>
           ))}
         </tbody>

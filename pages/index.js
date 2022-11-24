@@ -1,7 +1,7 @@
-import Head from "next/head";
-import Calculator from "../components/Calculator";
+import Head from 'next/head';
+import Calculator from '../components/Calculator';
 
-export default function Home() {
+export default function Index() {
   return (
     <>
       <Head>
@@ -14,7 +14,7 @@ export default function Home() {
           </div>
           <div className='py-10 border-t border-slate-300/30'>
             <p className='text-white text-center text-xs'>
-              Designed and Created by{" "}
+              Designed and Created by{' '}
               <a
                 href='https://instagram.com/rizkiiaprmn'
                 className='font-bold text-white'
@@ -22,7 +22,7 @@ export default function Home() {
                 rel='noreferrer'
               >
                 rizkiiaprmn
-              </a>{" "}
+              </a>{' '}
               © Tugas IMK (TI - 3C) 2022
             </p>
           </div>

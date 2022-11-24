@@ -1,10 +1,11 @@
-import { useState } from "react";
-import ButtonCalculator from "./ButtonCalculator";
-import CalculateHistory from "./CalculateHistory";
+import { useState } from 'react';
+import ButtonCalculator from './ButtonCalculator';
+import CalculateHistory from './CalculateHistory';
+import Image from 'next/image';
 
 export default function Calculator() {
-  const [displayCalculate, setDisplayCalculate] = useState("");
-  const [dataCalculate, setDataCalculate] = useState("");
+  const [displayCalculate, setDisplayCalculate] = useState('');
+  const [dataCalculate, setDataCalculate] = useState('');
   const [result, setResult] = useState(0);
   const [historyCalculate, setHistoryCalculate] = useState([]);
   const [validateOperator, setValidateOperator] = useState(0);
@@ -17,7 +18,7 @@ export default function Calculator() {
   const operatorHandler = (value, e) => {
     if (validateOperator)
       return alert(
-        "Operator telah ditetapkan! Hanya diperbolehkan menggunakan 1 operator matematika"
+        'Operator telah ditetapkan! Hanya diperbolehkan menggunakan 1 operator matematika'
       );
     setValidateOperator(1);
     setDisplayCalculate(`${displayCalculate}${value}`);
@@ -25,23 +26,25 @@ export default function Calculator() {
   };
 
   const clearDisplay = () => {
-    setDataCalculate("");
-    setDisplayCalculate("");
+    setDataCalculate('');
+    setDisplayCalculate('');
     setValidateOperator(0);
     setResult(0);
   };
 
-  const sliceDisplay = () => setDisplayCalculate(displayCalculate.slice(0, -1));
+  const sliceDisplay = () => {
+    setDisplayCalculate(displayCalculate.slice(0, -1));
+  };
 
   const calculate = (data, e) => {
-    setDisplayCalculate("");
+    setDisplayCalculate('');
 
     let hasil = 0;
-    let angkaPertama = "";
-    let angkaKedua = "";
-    let operator = "";
+    let angkaPertama = '';
+    let angkaKedua = '';
+    let operator = '';
     let operatorCondition = false;
-    const dataForMap = data.split("");
+    const dataForMap = data.split('');
 
     dataForMap.map((item) => {
       if (isNaN(Number(item))) {
@@ -58,19 +61,19 @@ export default function Calculator() {
     const angkaKeduaConverted = Number(angkaKedua);
 
     switch (operator) {
-      case "+":
+      case '+':
         hasil = angkaPertamaConverted + angkaKeduaConverted;
         break;
-      case "-":
+      case '-':
         hasil = angkaPertamaConverted - angkaKeduaConverted;
         break;
-      case "×":
+      case '×':
         hasil = angkaPertamaConverted * angkaKeduaConverted;
         break;
-      case "÷":
+      case '÷':
         hasil = angkaPertamaConverted / angkaKeduaConverted;
         break;
-      case "%":
+      case '%':
         hasil = angkaPertamaConverted % angkaKeduaConverted;
         break;
     }
@@ -86,7 +89,7 @@ export default function Calculator() {
 
   return (
     <>
-      <div className='xl:w-4/12 lg:w-5/12 w-full bg-cyan-600 p-3'>
+      <div className='xl:w-4/12 lg:w-5/12 w-full lg:h-fit bg-cyan-600 p-3'>
         <div className='bg-white h-[150px] p-2 text-right'>
           <div className='text-8xl truncate'>{result}</div>
           <div className='text-4xl text-black/30 truncate'>
@@ -98,19 +101,19 @@ export default function Calculator() {
             C
           </ButtonCalculator>
           <ButtonCalculator variant={0} action={sliceDisplay.bind(this)}>
-            <img src='/delete.svg' alt='delete' width={35} height={35} />
+            <Image src='/delete.svg' alt='delete' width={35} height={35} />
           </ButtonCalculator>
           <ButtonCalculator
             variant={0}
-            action={operatorHandler.bind(this, "%")}
+            action={operatorHandler.bind(this, '%')}
           >
-            <img src='/percent.svg' alt='percent' width={35} height={35} />
+            <Image src='/percent.svg' alt='percent' width={35} height={35} />
           </ButtonCalculator>
           <ButtonCalculator
             variant={1}
-            action={operatorHandler.bind(this, "÷")}
+            action={operatorHandler.bind(this, '÷')}
           >
-            <img src='/divided.svg' alt='divided' width={35} height={35} />
+            <Image src='/divided.svg' alt='divided' width={35} height={35} />
           </ButtonCalculator>
           <ButtonCalculator
             variant={0}
@@ -132,22 +135,27 @@ export default function Calculator() {
           </ButtonCalculator>
           <ButtonCalculator
             variant={1}
-            action={operatorHandler.bind(this, "×")}
+            action={operatorHandler.bind(this, '×')}
           >
-            <img src='/substract.svg' alt='substract' width={35} height={35} />
+            <Image
+              src='/substract.svg'
+              alt='substract'
+              width={35}
+              height={35}
+            />
           </ButtonCalculator>
           <ButtonCalculator
             variant={0}
             action={displayCalculateHandler.bind(this, 4)}
           >
             4
-          </ButtonCalculator>{" "}
+          </ButtonCalculator>{' '}
           <ButtonCalculator
             variant={0}
             action={displayCalculateHandler.bind(this, 5)}
           >
             5
-          </ButtonCalculator>{" "}
+          </ButtonCalculator>{' '}
           <ButtonCalculator
             variant={0}
             action={displayCalculateHandler.bind(this, 6)}
@@ -156,9 +164,9 @@ export default function Calculator() {
           </ButtonCalculator>
           <ButtonCalculator
             variant={1}
-            action={operatorHandler.bind(this, "-")}
+            action={operatorHandler.bind(this, '-')}
           >
-            <img src='/min.svg' alt='min' width={35} height={35} />
+            <Image src='/min.svg' alt='min' width={35} height={35} />
           </ButtonCalculator>
           <ButtonCalculator
             variant={0}
@@ -180,9 +188,9 @@ export default function Calculator() {
           </ButtonCalculator>
           <ButtonCalculator
             variant={1}
-            action={operatorHandler.bind(this, "+")}
+            action={operatorHandler.bind(this, '+')}
           >
-            <img src='/plus.svg' alt='plus' width={35} height={35} />
+            <Image src='/plus.svg' alt='plus' width={35} height={35} />
           </ButtonCalculator>
           <ButtonCalculator variant={0}>r.</ButtonCalculator>
           <ButtonCalculator
@@ -196,7 +204,7 @@ export default function Calculator() {
             action={calculate.bind(this, dataCalculate)}
             widthCustom='w-6/12'
           >
-            <img src='/equals.svg' alt='equals' width={35} height={35} />
+            <Image src='/equals.svg' alt='equals' width={35} height={35} />
           </ButtonCalculator>
         </div>
       </div>
