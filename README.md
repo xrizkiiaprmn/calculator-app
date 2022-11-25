@@ -1,9 +1,13 @@
 ## Aplikasi Kalkulator
 
 Aplikasi Kalkulator Sederhana berbasis Web-Application, yang dibuat menggunakan Framework NextJS.
+
 Aplikasi ini dibuat untuk memenuhi tugas Mata Kuliah Interaksi Manusia dan Komputer (IMK) Prodi Teknik Informatika Kelas 3C.
+
 Kelompok 13
+
 Anggota Kelompok :
+
 - RIZKI AGUNG PERMANA (112110107)
 - THORIQ AHMAD ALAWI (112110111)
 - GHOFUR AHMAD SODIKIN (112110091)
